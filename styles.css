@@ -1,10 +1,12 @@
 /* Reset básico */
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Importação da fonte Open Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 /* Estilos gerais */
 body {
@@ -22,25 +24,6 @@ header {
     text-align: center;
 }
 
-/* Importação da fonte Open Sans do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-/* Estilo do logo */
-.logo-container {
-    margin: 1.5rem auto;
-    text-align: center;
-}
-
-.logo-image {
-    width: 200px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-image:hover {
-    transform: scale(1.05);
-}
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -54,17 +37,26 @@ header {
     color: #fff;
 }
 
-.main-subtitle {
-    font-size: 1.3rem;
-    color: #ecf0f1;
-    max-width: 800px;
-    margin: 0 auto;
+/* Estilo do logo */
+.logo-container {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
 }
 
 /* Grid de banners */
 .banners-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem 0;
 }
@@ -149,6 +141,12 @@ footer {
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+    .banners-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .banners-container {
         grid-template-columns: 1fr;
