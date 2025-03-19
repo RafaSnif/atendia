@@ -32,7 +32,7 @@ header {
 }
 
 .logo-image {
-    width: 200px;
+    width: 300px;
     height: auto;
     transition: transform 0.3s ease;
 }
